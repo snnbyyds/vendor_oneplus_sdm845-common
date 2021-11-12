@@ -1116,7 +1116,6 @@ PRODUCT_PACKAGES += \
     QtiTelephonyService \
     uceShimService \
     WfdService \
-    ims \
     qcrilmsgtunnel \
     qcnvitems \
     WfdCommon \
