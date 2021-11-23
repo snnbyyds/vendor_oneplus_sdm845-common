@@ -279,6 +279,13 @@ dex_import {
 	jars: ["proprietary/system/framework/WfdCommon.jar"],
 }
 
+dex_import {
+	name: "vendor.oneplus.hardware.camera-V1.0-java",
+	owner: "oneplus",
+	jars: ["proprietary/system_ext/framework/vendor.oneplus.hardware.camera-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
 prebuilt_etc_xml {
 	name: "android.hardware.gnss@2.1-service-qti",
 	owner: "oneplus",
