@@ -99,6 +99,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "pasrservice",
+	owner: "oneplus",
+	apk: "proprietary/vendor/app/pasrservice/pasrservice.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
 	name: "PowerOffAlarm",
 	owner: "oneplus",
 	apk: "proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk",
@@ -156,6 +167,28 @@ android_app_import {
 }
 
 android_app_import {
+	name: "PerformanceMode",
+	owner: "oneplus",
+	apk: "proprietary/system_ext/app/PerformanceMode/PerformanceMode.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "PowerSaveMode",
+	owner: "oneplus",
+	apk: "proprietary/system_ext/app/PowerSaveMode/PowerSaveMode.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
 	name: "QtiTelephonyService",
 	owner: "oneplus",
 	apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
@@ -181,6 +214,17 @@ android_app_import {
 	name: "uceShimService",
 	owner: "oneplus",
 	apk: "proprietary/system_ext/app/uceShimService/uceShimService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "workloadclassifier",
+	owner: "oneplus",
+	apk: "proprietary/system_ext/app/workloadclassifier/workloadclassifier.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -246,6 +290,24 @@ android_app_import {
 	},
 	privileged: true,
 	system_ext_specific: true,
+}
+
+dex_import {
+	name: "QPerformance",
+	owner: "oneplus",
+	jars: ["proprietary/system/framework/QPerformance.jar"],
+}
+
+dex_import {
+	name: "QXPerformance",
+	owner: "oneplus",
+	jars: ["proprietary/system/framework/QXPerformance.jar"],
+}
+
+dex_import {
+	name: "UxPerformance",
+	owner: "oneplus",
+	jars: ["proprietary/system/framework/UxPerformance.jar"],
 }
 
 dex_import {
@@ -529,6 +591,24 @@ prebuilt_etc_xml {
 	name: "vendor.qti.gnss@4.0-service",
 	owner: "oneplus",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.qti.hardware.servicetracker@1.2-service",
+	owner: "oneplus",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.qti.memory.pasrmanager@1.0-service",
+	owner: "oneplus",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.memory.pasrmanager@1.0-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
